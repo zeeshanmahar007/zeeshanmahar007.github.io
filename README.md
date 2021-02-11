@@ -1,2 +1,2 @@
-# Personal Website
+# Website
 simple static page
