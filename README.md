@@ -1,2 +1,2 @@
 # Website
-simple static page
+Github Pages
