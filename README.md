@@ -1,2 +1,2 @@
 # Website
-Github Pages
+My Portfolio website hosted on GitHub Pages
