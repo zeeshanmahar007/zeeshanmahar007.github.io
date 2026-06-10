@@ -1,533 +1,746 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Muhammad Zeeshan - Open Source Enthusiast, Community Builder</title>
-    <META name="keywords"
-        content="Muhammad Zeeshan, Mahar, Zeeshan, zeeshanmahar007, MuhammadZeeshan, muhammad, community builder">
-    <META name="description"
-        content="Official Website of Muhammad Zeeshan. Community Builder,Open Source Enthusiast.">
-    <link rel="shortcut icon" href="Images/profile.jpg" type="image/jpeg" />
-    <link rel="canonical" href="zeeshanmahar007.github.io" />
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Muhammad Zeeshan — ML & Generative AI</title>
+<meta name="description" content="Muhammad Zeeshan — Machine Learning Engineer working on Generative AI, retrieval-augmented systems, and applied deep learning. First-author at IEEE ICASSP 2026." />
 
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="js/modernizr.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- Open Graph -->
+<meta property="og:title" content="Muhammad Zeeshan — ML & Generative AI" />
+<meta property="og:description" content="Machine learning engineer. First-author at IEEE ICASSP 2026. Building RAG systems, multi-agent LLMs, and applied deep learning." />
+<meta property="og:type" content="website" />
 
-    <meta property="og:title" content="Muhammad Zeeshan - Open Source Enthusiast, Community Builder">
-    <meta property="og:image"
-        content="Images/profile.jpg">
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,0..100&family=Inter:wght@300..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --paper: #F1ECE0;
+    --paper-2: #E8E2D2;
+    --ink: #1A1714;
+    --ink-2: #2D2825;
+    --muted: #807769;
+    --muted-2: #A39A8C;
+    --hairline: #D5CBB6;
+    --accent: #2D4A5F;
+    --accent-soft: #4A6B82;
+
+    --ff-display: "Fraunces", Georgia, serif;
+    --ff-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    --ff-mono: "JetBrains Mono", ui-monospace, monospace;
+
+    --max: 1120px;
+    --col: 720px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--ff-body);
+    font-size: 17px;
+    line-height: 1.65;
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Subtle paper grain */
+  body::before {
+    content: "";
+    position: fixed; inset: 0;
+    pointer-events: none;
+    z-index: 100;
+    opacity: 0.025;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>");
+  }
+
+  a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--hairline); transition: color .18s ease, border-color .18s ease; }
+  a:hover, a:focus-visible { color: var(--accent); border-color: var(--accent); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 2px; }
+
+  /* ===== Top nav ===== */
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    background: color-mix(in srgb, var(--paper) 88%, transparent);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--hairline);
+  }
+  .nav-inner {
+    max-width: var(--max); margin: 0 auto;
+    padding: 14px 32px;
+    display: flex; align-items: baseline; justify-content: space-between;
+    font-family: var(--ff-mono); font-size: 12px;
+    text-transform: uppercase; letter-spacing: 0.08em;
+  }
+  .nav a { border: none; color: var(--muted); margin-left: 28px; }
+  .nav a:hover { color: var(--ink); }
+  .nav-name { color: var(--ink); font-weight: 500; }
+  .nav-links { display: flex; }
+  @media (max-width: 640px) {
+    .nav-links a:nth-child(n+4) { display: none; }
+    .nav-inner { padding: 12px 20px; }
+    .nav a { margin-left: 18px; }
+  }
+
+  /* ===== Layout ===== */
+  main { max-width: var(--max); margin: 0 auto; padding: 0 32px 120px; }
+  @media (max-width: 640px) { main { padding: 0 20px 80px; } }
+
+  section { padding: 80px 0; border-bottom: 1px solid var(--hairline); }
+  section:last-of-type { border-bottom: none; }
+  @media (max-width: 640px) { section { padding: 56px 0; } }
+
+  .section-head {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 48px;
+    margin-bottom: 40px;
+    align-items: baseline;
+  }
+  .section-eyebrow {
+    font-family: var(--ff-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    padding-top: 12px;
+  }
+  .section-title {
+    font-family: var(--ff-display);
+    font-weight: 350;
+    font-size: clamp(28px, 4vw, 44px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin: 0;
+    font-variation-settings: "opsz" 80, "SOFT" 30;
+  }
+  .section-title em {
+    font-style: italic;
+    font-weight: 300;
+    font-variation-settings: "opsz" 144, "SOFT" 100;
+    color: var(--accent);
+  }
+  @media (max-width: 720px) {
+    .section-head { grid-template-columns: 1fr; gap: 12px; margin-bottom: 28px; }
+    .section-eyebrow { padding-top: 0; }
+  }
+
+  /* ===== Hero (paper title-page) ===== */
+  .hero {
+    padding: 80px 0 100px;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .hero-meta {
+    font-family: var(--ff-mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 56px;
+  }
+  .hero-name {
+    font-family: var(--ff-display);
+    font-weight: 300;
+    font-size: clamp(48px, 9vw, 104px);
+    line-height: 0.95;
+    letter-spacing: -0.035em;
+    margin: 0 0 28px;
+    font-variation-settings: "opsz" 144, "SOFT" 50;
+  }
+  .hero-name .amp {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--accent);
+    font-variation-settings: "opsz" 144, "SOFT" 100;
+  }
+  .hero-affiliations {
+    font-family: var(--ff-mono);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    line-height: 1.9;
+    margin-bottom: 64px;
+    padding-left: 4px;
+    border-left: 2px solid var(--accent);
+    padding: 4px 0 4px 20px;
+  }
+  .hero-affiliations .sup { color: var(--accent); font-weight: 500; }
+  .hero-abstract-label {
+    font-family: var(--ff-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+  .hero-abstract {
+    max-width: 640px;
+    font-family: var(--ff-display);
+    font-weight: 350;
+    font-size: clamp(20px, 2.3vw, 26px);
+    line-height: 1.45;
+    letter-spacing: -0.01em;
+    color: var(--ink-2);
+    margin: 0 0 48px;
+    font-variation-settings: "opsz" 36, "SOFT" 50;
+  }
+  .hero-abstract em {
+    font-style: italic;
+    font-variation-settings: "opsz" 36, "SOFT" 100;
+    color: var(--accent);
+  }
+  .hero-contact {
+    display: flex; flex-wrap: wrap; gap: 24px;
+    font-family: var(--ff-mono);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+  }
+  .hero-contact a { color: var(--ink); border-bottom: 1px solid var(--hairline); }
+
+  /* ===== Publications ===== */
+  .pub-list { list-style: none; padding: 0; margin: 0; }
+  .pub {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 48px;
+    padding: 28px 0;
+    border-top: 1px solid var(--hairline);
+  }
+  .pub:first-child { border-top: none; padding-top: 0; }
+  .pub-meta {
+    font-family: var(--ff-mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    line-height: 1.8;
+  }
+  .pub-meta .first-author {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 2px 8px;
+    background: var(--accent);
+    color: var(--paper);
+    border-radius: 2px;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+  }
+  .pub-title {
+    font-family: var(--ff-display);
+    font-weight: 400;
+    font-size: clamp(20px, 2.4vw, 26px);
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+    margin: 0 0 10px;
+    font-variation-settings: "opsz" 36, "SOFT" 30;
+  }
+  .pub-venue {
+    font-style: italic;
+    color: var(--muted);
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  .pub-abs { color: var(--ink-2); font-size: 15px; line-height: 1.6; margin: 0 0 10px; }
+  .pub-link {
+    font-family: var(--ff-mono);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  @media (max-width: 720px) {
+    .pub { grid-template-columns: 1fr; gap: 12px; }
+  }
+
+  /* ===== Projects ===== */
+  .work-list { list-style: none; padding: 0; margin: 0; }
+  .work {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 48px;
+    padding: 32px 0;
+    border-top: 1px solid var(--hairline);
+    transition: background .25s ease;
+  }
+  .work:first-child { border-top: none; padding-top: 0; }
+  .work:hover { background: linear-gradient(to right, transparent, var(--paper-2) 30%, var(--paper-2) 70%, transparent); }
+  .work-meta {
+    font-family: var(--ff-mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    line-height: 1.9;
+  }
+  .work-meta .year { color: var(--ink); font-weight: 500; }
+  .work-meta .tag {
+    display: inline-block;
+    margin-right: 6px;
+    margin-top: 4px;
+    color: var(--muted);
+  }
+  .work-meta .tag::after { content: "·"; margin-left: 6px; color: var(--muted-2); }
+  .work-meta .tag:last-child::after { content: ""; }
+  .work-title {
+    font-family: var(--ff-display);
+    font-weight: 400;
+    font-size: clamp(22px, 2.6vw, 30px);
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+    margin: 0 0 12px;
+    font-variation-settings: "opsz" 60, "SOFT" 40;
+  }
+  .work-title em { font-style: italic; color: var(--accent); }
+  .work-desc { color: var(--ink-2); font-size: 16px; line-height: 1.6; margin: 0; max-width: 64ch; }
+  @media (max-width: 720px) {
+    .work { grid-template-columns: 1fr; gap: 12px; padding: 24px 0; }
+  }
+
+  /* ===== Experience ===== */
+  .exp-list { list-style: none; padding: 0; margin: 0; }
+  .exp {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 48px;
+    padding: 24px 0;
+    border-top: 1px solid var(--hairline);
+  }
+  .exp:first-child { border-top: none; padding-top: 0; }
+  .exp-when {
+    font-family: var(--ff-mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+  .exp-when .now {
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .exp-role {
+    font-family: var(--ff-display);
+    font-size: 20px;
+    font-weight: 450;
+    line-height: 1.3;
+    margin: 0 0 4px;
+    letter-spacing: -0.01em;
+    font-variation-settings: "opsz" 28, "SOFT" 20;
+  }
+  .exp-org { color: var(--muted); font-size: 14px; margin: 0 0 6px; font-style: italic; }
+  .exp-detail { font-size: 15px; color: var(--ink-2); margin: 0; line-height: 1.55; max-width: 60ch; }
+  @media (max-width: 720px) {
+    .exp { grid-template-columns: 1fr; gap: 6px; }
+  }
+
+  /* ===== Skills ===== */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 48px;
+  }
+  .skills-list { display: grid; gap: 20px; }
+  .skill-row {
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .skill-row:last-child { border-bottom: none; }
+  .skill-label {
+    font-family: var(--ff-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 8px;
+    display: block;
+  }
+  .skill-items { font-size: 15.5px; color: var(--ink-2); line-height: 1.65; }
+  .skill-items .pri { color: var(--ink); font-weight: 500; }
+  @media (max-width: 720px) {
+    .skills-grid { grid-template-columns: 1fr; gap: 24px; }
+  }
+
+  /* ===== Contact ===== */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 48px;
+  }
+  .contact-body {
+    font-family: var(--ff-display);
+    font-weight: 350;
+    font-size: clamp(22px, 2.6vw, 30px);
+    line-height: 1.4;
+    letter-spacing: -0.015em;
+    max-width: 600px;
+    color: var(--ink);
+    font-variation-settings: "opsz" 36, "SOFT" 50;
+  }
+  .contact-body em {
+    font-style: italic;
+    color: var(--accent);
+    font-variation-settings: "opsz" 36, "SOFT" 100;
+  }
+  .contact-links {
+    margin-top: 28px;
+    display: flex; flex-wrap: wrap; gap: 16px 28px;
+    font-family: var(--ff-mono);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  @media (max-width: 720px) {
+    .contact-grid { grid-template-columns: 1fr; gap: 16px; }
+  }
+
+  /* ===== Footer ===== */
+  footer {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 32px;
+    border-top: 1px solid var(--hairline);
+    font-family: var(--ff-mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+  }
+
+  /* ===== Reveal on scroll ===== */
+  .reveal { opacity: 0; transform: translateY(12px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    html { scroll-behavior: auto; }
+  }
+</style>
 </head>
+<body>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
-    <nav id="myNavbar" class="navbar navbar-expand-lg navbar-dark sticky-top">
-        <a class="navbar-brand" href="index.html">Muhammad Zeeshan</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="nav navbar-nav ml-auto">
-                <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-                    <a class="nav-link" href="#home">Home</a>
-                </li>
-                <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-                    <a class="nav-link" href="#aboutMe">About Me</a>
-                </li>
-                <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-                    <a class="nav-link" href="#experience">Experience</a>
-                </li>
-                <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-                    <a class="nav-link" href="#education">Education</a>
-                </li>
-                <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-                    <a class="nav-link" href="#skills">Skills</a>
-                </li>
-                <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-                    <a class="nav-link" href="#activities">Activities</a>
-                </li>
-                <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-                    <a class="nav-link" href="#myWork">My Work</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+<nav class="nav">
+  <div class="nav-inner">
+    <span class="nav-name">M. Zeeshan</span>
+    <div class="nav-links">
+      <a href="#publications">Publications</a>
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
 
-    <!-- Home Section START -->
-    <section id="home" style="margin-top: 0%; padding-top: 60px;">
-        <img id="tilt" class="rounded-circle d-block mx-auto m-3" src="Images/profile.jpg" height="256" width="256"
-            data-aos="zoom-in-up">
-        <div class="h2 mt-2 text-center" style="color: #FFFFFF">Muhammad Zeeshan</div>
+<main>
 
-        <div class="cd-intro m-3 text-center">
-            <h4 class="cd-headline slide">
-                <span class="cd-words-wrapper" style="width:300px !important">
-                    <b class="is-visible">❤️ Machine Learning </b>
-                    <b>✈️ Python</b>
-                    <b>😍 Open Source</b>
-                    <b>👨🏻‍💻 Enthusiast</b>
-                    <b>✍️ Technical</b>
-                    <b>🇵🇰 Pakistani</b>
-                </span>
-            </h4>
-        </div>
+<!-- ========== HERO ========== -->
+<section class="hero" id="top">
+  <div class="hero-meta">
+    <span>Portfolio · v2026</span>
+    <span>Lahore, PK</span>
+  </div>
 
-        <div class="d-flex align-items-center">
-            <a href="https://docs.google.com/document/d/1AZlO-QNMr7WRhRSxy7SvtB5q8vRybrBh/edit?usp=sharing&ouid=105064711713228021984&rtpof=true&sd=true"
-                class="btn btn-outline-light d-block mx-auto m-4" target="_blank" role="button"><i
-                    class="fas fa-file mr-2"></i>
-                View Resume</a>
-        </div>
+  <h1 class="hero-name">Muhammad<br>Zeesh<span class="amp">a</span>n</h1>
 
-        <div class="container-fluid d-block mx-auto text-center" style="width:fit-content;" data-aos="fade-up"
-            data-aos-anchor-placement="top-bottom">
-            <a href="mailto: mahar.zeeshan5994@gmail.com" href="#" 
-                class="far fa-envelope rounded-circle"></a>
-            <a href="https://www.facebook.com/maharzeeshan5994" target="_blank"
-                class="fab fa-facebook-f rounded-circle"></a>
-            <a href="https://twitter.com/zeeshan_mahar07" target="_blank"
-                class="fab fa-twitter rounded-circle"></a>
-            <a href="https://instagram.com/zeeshan_mahar007/" target="_blank"
-                class="fab fa-instagram rounded-circle"></a>
-            <a href="https://www.linkedin.com/in/zeeshanmahar007" target="_blank"
-                class="fab fa-linkedin-in rounded-circle"></a>
-            <a href="https://github.com/zeeshanmahar007" target="_blank"
-                class="fab fa-github-alt rounded-circle"></a>
-            <a href="https://medium.com/@zeeshanmahar007" target="_blank"
-                class="fab fa-medium-m rounded-circle"></a>
-        </div>
-    </section>
-    <!-- Home Section END -->
+  <div class="hero-affiliations">
+    <span class="sup">¹</span> Lahore University of Management Sciences &middot; Research Assistant<br>
+    <span class="sup">²</span> ICMA Digital Academy &middot; Instructor, Generative AI
+  </div>
 
-    <!-- About Section START -->
-    <section id="aboutMe">
-        <div class="justify-content-center">
-            <div class="h1 text-center" data-aos="zoom-in-up"><i class="fas fa-user-alt mr-2"></i><b>About</b> Me
-            </div>
-            <div class="d-flex align-items-center">
-                <div class="p text-monospace d-block mx-auto p-4 larger align-self-center" data-aos="zoom-in-down">
-                    <p style="font-family:verdana">
-                       <b> I'm Muhammad Zeeshan, a Open Source Enthusiast, Community Builder and Technical blog writer.</b> <br>
-                    I'm a Final Year Computer Science Student Enrolled in FAST - National University, Faisalabad. <br>
-                    I'm Open Source Enthusiast and Learner. I'm passionate about Machine Learning & new Technology. <br> I
-                    Believe in the Power of Community and active Google Developer Student Club Lead.
-                        </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- About Section END -->
+  <div class="hero-abstract-label">Abstract</div>
+  <p class="hero-abstract">
+    Machine learning engineer working on <em>generative AI</em>, retrieval-augmented systems, and applied deep learning. First-author at <em>IEEE ICASSP 2026</em>. I build RAG pipelines, multi-agent LLM applications, and computer-vision models — and ship them to GCP and AWS.
+  </p>
 
-    <!-- Experience Section START -->
-    <section id="experience">
-        <div class="h1 text-center" data-aos="zoom-in-up"><i class="fas fa-briefcase"></i> My <b>Experience</b></div>
-        <div class="d-flex align-items-center">
-            <ul class="list-group p-3 mx-auto" style="width: fit-content;" data-aos="zoom-in-down">
-                <li class="list-group-item">
-                    <div class="row">
-                        <div class="col-auto">
-                            <img class="img-responsive rounded m-2 pr-2 pl-2" style="background-color: #FFFFFF;"
-                                src="Images/google.png" width="64"
-                                height="64" />
-                        </div>
-                        <div class="col-auto">
-                            <div class="small" style="color: #b7b6bb">08/2021 - PRESENT</div>
-                            <div class="large font-weight-bold font-italic mt-2" style="color: #FFFFFF;">
-                            Google Developer Student Club Mentor</div>
-                            <div class="large mt-2" style="color: #FFFFFF;"><a class="text-decoration-none"
-                                    href="https://developers.google.com/community/dsc" target="_blank">Google Developers</a></div>
-                            <!--<div class="small" style="color: #b7b6bb">Pune, Maharashtra</div> -->
-                        </div>
-                    </div>
-                </li>
+  <div class="hero-contact">
+    <a href="mailto:mahar.zeeshan5994@gmail.com">mahar.zeeshan5994@gmail.com</a>
+    <a href="https://www.linkedin.com/in/zeeshanmahar007/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://github.com/zeeshanmahar007" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://scholar.google.com/citations?user=KJ0BdyAAAAAJ" target="_blank" rel="noopener">Scholar</a>
+  </div>
+</section>
 
-                <li class="list-group-item">
-                    <div class="row">
-                        <div class="col-auto">
-                            <img class="img-responsive rounded m-2 pr-2 pl-2" style="background-color: #FFFFFF;"
-                                src="Images/nu_logo.png" width="64"
-                                height="64" />
-                        </div>
-                        <div class="col-auto">
-                            <div class="small" style="color: #b7b6bb">09/2020 - 03/2021</div>
-                            <div class="large font-weight-bold font-italic mt-2" style="color: #FFFFFF;">
-                            Teaching Assistant of Object Oriented Programming</div>
-                            <div class="large mt-2" style="color: #FFFFFF;"><a class="text-decoration-none"
-                                    href="https://nu.edu.pk/" target="_blank">FAST-NUCES</a></div>
-                            <!--<div class="small" style="color: #b7b6bb">Pune, Maharashtra</div> -->
-                        </div>
-                    </div>
-                </li>
+<!-- ========== PUBLICATIONS ========== -->
+<section id="publications">
+  <div class="section-head reveal">
+    <div class="section-eyebrow">§ Publications</div>
+    <h2 class="section-title">Peer-reviewed <em>research</em>.</h2>
+  </div>
 
-                <li class="list-group-item">
-                    <div class="row">
-                        <div class="col-auto">
-                            <img class="img-responsive rounded m-2 pr-2 pl-2" style="background-color: #FFFFFF;"
-                                src="Images/google.png" width="64"
-                                height="64" />
-                        </div>
-                        <div class="col-auto">
-                            <div class="small" style="color: #b7b6bb">07/2020 - 08/2021</div>
-                            <div class="large font-weight-bold font-italic mt-2" style="color: #FFFFFF;">
-                            Google Developer Student Club Lead</div>
-                            <div class="large mt-2" style="color: #FFFFFF;"><a class="text-decoration-none"
-                                    href="https://developers.google.com/community/dsc" target="_blank">Google Developers</a></div>
-                        </div>
-                    </div>
-                </li>
+  <ul class="pub-list">
+    <li class="pub reveal">
+      <div class="pub-meta">
+        Jan 2026<br>
+        IEEE&nbsp;ICASSP<br>
+        <span class="first-author">First author</span>
+      </div>
+      <div>
+        <h3 class="pub-title">Deep Spatio-Temporal Models for Decoding Purkinje Cell Activity in Tongue Movements</h3>
+        <div class="pub-venue">IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2026.</div>
+        <p class="pub-abs">Designed deep spatio-temporal neural architectures to decode Purkinje cell firing patterns and map them to tongue motor trajectories — bridging cerebellar neuroscience and signal-processing deep learning.</p>
+        <a class="pub-link" href="https://ieeexplore.ieee.org/abstract/document/11463094" target="_blank" rel="noopener">→ IEEE Xplore</a>
+      </div>
+    </li>
 
-                
-            </ul>
-        </div>
+    <li class="pub reveal">
+      <div class="pub-meta">
+        2026<br>
+        CHiPSAL<br>
+        @ LREC-COLING<br>
+        <span style="display:inline-block;margin-top:6px;padding:2px 8px;border:1px solid var(--muted);border-radius:2px;font-size:10px;letter-spacing:0.1em;">Co-author</span>
+      </div>
+      <div>
+        <h3 class="pub-title">DR-RAG: Addressing Retrieval Misalignment in Low-Resource Urdu Question Answering</h3>
+        <div class="pub-venue">Workshop on Challenges in Processing South Asian Languages (CHiPSAL), LREC-COLING 2026.</div>
+        <p class="pub-abs">A retrieval-augmented generation framework that mitigates retrieval drift in low-resource Urdu QA through dense-retrieval alignment and re-ranking strategies.</p>
+        <a class="pub-link" href="http://lrec-conf.org/proceedings/lrec2026/workshops/chipsal/2026.chipsal-1.0.pdf" target="_blank" rel="noopener">→ Proceedings</a>
+      </div>
+    </li>
+  </ul>
+</section>
 
-    </section>
-    <!-- Experience Section END -->
-    
-    <!-- Education Section START -->
-    <section id="education">
-        <div class="h1 text-center" data-aos="zoom-in-up"><i class="fas fa-graduation-cap"></i>My <b>Education</b></div>
-        <div class="d-flex align-items-center">
-            <ul class="list-group p-3 mx-auto" data-aos="zoom-in-down">
-                
-                <li class="list-group-item">
-                    <div class="small" style="color: #b7b6bb">2018 - PRESENT</div>
-                    <div class="large font-weight-bold mt-2" style="color: #FFFFFF;">FAST - National University
-                    </div>
-                    <div class="small" style="color: #b7b6bb">Faisalabad, Pakistan</div>
-                    <div class="font-weight-light mt-1" style="color: #7b7a7f">Bechelor of Science in Computer Science </div>
-                </li>
-                <li class="list-group-item">
-                    <div class="small" style="color: #b7b6bb">2016 - 2018</div>
-                    <div class="large font-weight-bold mt-2" style="color: #FFFFFF;">Punjab Group of College</div>
-                    <div class="small" style="color: #b7b6bb">Sargodha, Pakistan</div>
-                    <div class="font-weight-light mt-1" style="color: #7b7a7f">FSC Pre-Engineering</div>
-                </li>
-            </ul>
-        </div>
+<!-- ========== WORK ========== -->
+<section id="work">
+  <div class="section-head reveal">
+    <div class="section-eyebrow">§ Selected Work</div>
+    <h2 class="section-title">Things I've <em>built</em>.</h2>
+  </div>
 
-    </section>
-    <!-- Education Section END -->
+  <ul class="work-list">
 
-    <!-- Skills Section START -->
-    <section id="skills">
-        <div class="h1 text-center" data-aos="zoom-in-up"><i class="fas fa-star"></i>My <b>Skills</b></div>
-        <div class="container-fluid d-block mx-auto text-center" style="width:fit-content;">
-            <div class="h4 mt-4">Languages:</div>
-            <div class="row justify-content-center align-items-center" data-aos="fade-down" data-aos-easing="linear"
-                data-aos-duration="500">
-                <div class="skill" style="color: #e43e00">
-                    <div class="fas fa-code p-0 m-1" style="font-size: 30px"></div>
-                    <div class="font-weight-bold">C++</div>
-                </div>
-                <div class="skill" style="color: #f3c623">
-                    <div class="fas fa-code p-0 m-1" style="font-size: 30px"></div>
-                    <div class="font-weight-bold">C</div>
-                </div>
-                <div class="skill" style="color: #cf5b1e">
-                    <div class="fab fa-html5  p-0 m-1" style="font-size: 30px"></div>
-                    <div class="font-weight-bold">HTML</div>
-                </div>
-                <div class="skill" style="color: #559cc4">
-                    <div class="fab fa-css3  p-0 m-1" style="font-size: 30px"></div>
-                    <div class="font-weight-bold">CSS</div>
-                </div>
-                <div class="skill" style="color: #f3c623">
-                    <div class="fab fa-python p-0 m-1" style="font-size: 30px"></div>
-                    <div class="font-weight-bold">Python</div>
-                </div>
-            </div>
+    <li class="work reveal">
+      <div class="work-meta">
+        <span class="year">2025</span><br>
+        <span class="tag">GPT-4o mini</span>
+        <span class="tag">RAG</span>
+        <span class="tag">ChromaDB</span>
+        <span class="tag">LangChain</span>
+      </div>
+      <div>
+        <h3 class="work-title">TaxGPT<em>.pk</em></h3>
+        <p class="work-desc">A multi-agent LLM tax assistant for Pakistan. Specialised GPT-4o-mini agents handle classification, retrieval, computation, and response — each fine-tuned with SFT, chain-of-thought prompting, and instruction tuning. Grounded in ChromaDB-indexed FBR tax law to reduce hallucinations.</p>
+      </div>
+    </li>
 
+    <li class="work reveal">
+      <div class="work-meta">
+        <span class="year">2025</span><br>
+        <span class="tag">RAG</span>
+        <span class="tag">Weaviate</span>
+        <span class="tag">AWS</span>
+        <span class="tag">Bedrock</span>
+        <span class="tag">Terraform</span>
+      </div>
+      <div>
+        <h3 class="work-title">Academic content <em>augmentation</em> tool</h3>
+        <p class="work-desc">RAG assistant over 400K+ arXiv papers. Improved retrieval precision via multi-perspective query generation and Reciprocal Rank Fusion across hybrid retrievers. Deployed end-to-end on AWS — Docker + ECR, EC2 / Fargate, S3 + CloudFront, Bedrock embeddings, infrastructure as code in Terraform.</p>
+      </div>
+    </li>
 
-            <div class="h4 mt-4">Databases:</div>
-            <div class="row justify-content-center align-items-center" data-aos="fade-down" data-aos-easing="linear"
-                data-aos-duration="500">
-                <div class="skill" style="color: #6685e4">
-                    <div class="fas fa-database  p-0 m-1" style="font-size: 30px"></div>
-                    <div class="font-weight-bold">SQL</div>
-                </div>
-                <div class="skill" style="color: #046e16">
-                    <div class="fas fa-database  p-0 m-1" style="font-size: 30px"></div>
-                    <div class="font-weight-bold">Oracle</div>
-                </div>
-            </div>
+    <li class="work reveal">
+      <div class="work-meta">
+        <span class="year">2024</span><br>
+        <span class="tag">PyTorch</span>
+        <span class="tag">ResNet50</span>
+        <span class="tag">CLIP</span>
+        <span class="tag">GIT</span>
+      </div>
+      <div>
+        <h3 class="work-title">Chest CT — <em>classification &amp; captioning</em></h3>
+        <p class="work-desc">A deep-learning pipeline combining ResNet50 (93%+ classification accuracy) with CLIP and GIT to auto-generate radiology-style captions. OpenCV contour analysis localises tumor position and estimates size for clinical context.</p>
+      </div>
+    </li>
 
-            <div class="h4 mt-4">Tools:</div>
-            <div class="row justify-content-center align-items-center" data-aos="fade-down" data-aos-easing="linear"
-                data-aos-duration="500">
-                <div class="skill" style="color: #ffffff">
-                    <div class="fab fa-git-square  p-0 m-1" style="font-size: 30px"></div>
-                    <div class="font-weight-bold">Git</div>
-                </div>
-                <div class="skill" style="color: #ffffff">
-                    <div class="fab fa-github-square  p-0 m-1" style="font-size: 30px"></div>
-                    <div class="font-weight-bold">GitHub</div>
-                </div>
-                <div class="skill" style="color: #ffffff">
-                    <div class="fab fa-github-square  p-0 m-1" style="font-size: 30px"></div>
-                    <div class="font-weight-bold">GitHub Actions</div>
-                </div>
-            
-            </div>
+    <li class="work reveal">
+      <div class="work-meta">
+        <span class="year">2024</span><br>
+        <span class="tag">BERT</span>
+        <span class="tag">T5</span>
+        <span class="tag">XLM-R</span>
+        <span class="tag">Low-resource NLP</span>
+      </div>
+      <div>
+        <h3 class="work-title">Urdu news <em>classification</em></h3>
+        <p class="work-desc">Curated a 2,000+ article Urdu news dataset via web scraping. Fine-tuned and benchmarked BERT, T5, and XLM-RoBERTa for multiclass classification — comparing accuracy and inference cost across model families.</p>
+      </div>
+    </li>
 
-            <div class="h4 mt-4">Other:</div>
-            <div class="row justify-content-center align-items-center" data-aos="fade-down" data-aos-easing="linear"
-                data-aos-duration="500">
-                <div class="skill" style="color: #ffffff">
-                    <div class="fas fa-pen-alt p-0 m-1" style="font-size: 30px"></div>
-                    <div class="font-weight-bold">Technical Writing</div>
-                </div>
-                <div class="skill" style="color: #ffffff">
-                    <div class="fas fa-users p-0 m-1" style="font-size: 30px"></div>
-                    <div class="font-weight-bold">Community Building</div>
-                </div>
-                <div class="skill" style="color: #ffffff">
-                    <div class="fas fa-user-friends  p-0 m-1" style="font-size: 30px"></div>
-                    <div class="font-weight-bold">Team Management</div>
-                </div>
-                <div class="skill" style="color: #ffffff">
-                    <div class="fas fa-users p-0 m-1" style="font-size: 30px"></div>
-                    <div class="font-weight-bold">Team Leadership</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Skills Section END -->
+    <li class="work reveal">
+      <div class="work-meta">
+        <span class="year">2022</span><br>
+        <span class="tag">Android</span>
+        <span class="tag">CV</span>
+        <span class="tag">TensorFlow</span>
+      </div>
+      <div>
+        <h3 class="work-title">SignTalk</h3>
+        <p class="work-desc">Final-year project — an Android app enabling bidirectional sign &harr; natural-language communication using a CNN-based gesture recognition model. Removes the need for a human interpreter for hearing- or speech-impaired users.</p>
+      </div>
+    </li>
 
-    <!-- Activities Section START -->
-    <section id="activities">
-        <div class="h1 text-center" data-aos="zoom-in-up"><i class="fas fa-tasks mr-2"></i>My <b>Activities</b></div>
-        <ul class="list-group p-3 mx-auto" style="width: fit-content;" data-aos="zoom-in-down">
-            
-            <li class="list-group-item" style=" background: transparent;">
-                <div class="small" style="color: #b7b6bb">October, 2020</div>
-                <div class="large mt-2">Participate in DevFest India Organised By GDG Communities in India. <a
-                        href="https://drive.google.com/file/d/1w9tjN0LXR_gfNj3K7X5q67e6bjH_Vb7m/view?usp=sharing" target="_blank">View Certificate</a></div>
-            </li>
-           
-            <li class="list-group-item">
-                <div class="small" style="color: #b7b6bb">April, 2021</div>
-                <div class="large mt-2">Participated in Solution Challange and submitted a solution in the 2021 Solution Challenge hosted by Google Developer Student Clubs. <a
-                href="https://drive.google.com/file/d/1aGS4cR_MZxQVcty_QibAYHcd3nbwTS6P/view?usp=sharing" target="_blank">View Certificate</a>
-                </div>
-            </li>
-            
-            
-            <li class="list-group-item">
-                <div class="small" style="color: #b7b6bb">May, 2020</div>
-                <div class="large mt-2">Attended and successfully completed all modules for a course in <b>Flutter Toolkit With Dart - Project Based</b> with
-                 GDG Peshawar in Collaboration with UNDP Pakistan. <a
-                    href="https://drive.google.com/file/d/1mCXJwFtib6NgtYIBBy1pyyaZlWAbKNn7/view?usp=sharing" target="_blank">View Certificate</a>
-            </div>
-                
-             <!--
-            </li>
-            <li class="list-group-item">
-                <div class="small" style="color: #b7b6bb">March, 2018</div>
-                <div class="large mt-2">Participated and qualified for Grand Finale of <b>Smart India Hackathon
-                        2018</b>.</div>
-            </li>
-            <li class="list-group-item">
-                <div class="small" style="color: #b7b6bb">July - August, 2018</div>
-                <div class="large mt-2">Designed and developed official website for college <a class="link"
-                        href="http://www.gpjalgaon.org.in" target="_blank">Government Polytechnic, Jalgaon</a>.</div>
-            </li>
-            <li class="list-group-item">
-                <div class="small" style="color: #b7b6bb">September, 2019</div>
-                <div class="large mt-2">Volunteer of GDG DevFest Pune 2019. (Mobile Application Development).</div>
-            </li>
-            <li class="list-group-item">
-                <div class="small" style="color: #b7b6bb">2019</div>
-                <div class="large mt-2">Attended Conferences - <b>Firebase India Roadshow 2019</b> and <b>GDG Pune
-                        DevFest19</b></div>
-            </li>
-        -->
+  </ul>
+</section>
 
-        </ul>
-    </section>
-    <!-- Activities Section END -->
+<!-- ========== EXPERIENCE ========== -->
+<section id="experience">
+  <div class="section-head reveal">
+    <div class="section-eyebrow">§ Experience</div>
+    <h2 class="section-title">Where I've <em>worked</em>.</h2>
+  </div>
 
-    <!-- My Work Section START -->
-    <section id="myWork">
-        <div class="h1 text-center" data-aos="zoom-in-up"><i class="fas fa-laptop-code"></i>My <b>Work</b></div>
-        <nav>
-            <div class="nav nav-pills nav-fill" id="nav-tab" role="tablist">
-                <a class="nav-item nav-link bordered-nav ml-1 mr-1 active" id="nav-apps-tab" data-toggle="tab"
-                    href="#nav-apps" role="tab" aria-controls="nav-apps" aria-selected="true">
-                    <div class="fa fa-laptop-code mr-2"></div>Projects
-                </a>
-                <a class="nav-item nav-link bordered-nav ml-1 mr-1" id="nav-articles-tab" data-toggle="tab"
-                    href="#nav-articles" role="tab" aria-controls="nav-articles" aria-selected="false">
-                    <div class="fa fa-pen-alt mr-2"></div>Articles
-                </a>
-            </div>
-        </nav>
-        <div class="tab-content" id="nav-tabContent" data-aos="zoom-in-down">
-            <div class="tab-pane fade show active" id="nav-apps" role="tabpanel" aria-labelledby="nav-apps-tab">
-                <!-- START Project -->
-                <div class="card-deck">
-                    <div class="card">
-                        <img class="card-img-top" src="Images/Apps/covid_management1.JPG" alt="Covid-19 Management System">
-                        <div class="card-body">
-                            <h5 class="card-title font-weight-bold">Covid-19 Management System</h5>
-                            <p class="card-text">The outbreak of Coronavirus in the world has big implications for the world. 
-                                This note aims to provide clarifications and general recommendations in order to support 
-                                consortia in managing these exceptional circumstances.I have developed this Management System
-                            for them to easly tackle with this situation.</p>
-                        </div>
-                        <div class="card-body">
-                            <a href="https://github.com/zeeshanmahar007/Covid-19-management-system-database-system" target="_blank"
-                                class="btn btn-outline-primary">Source Code</a>
-                        </div>
-                    </div>
+  <ul class="exp-list">
+    <li class="exp reveal">
+      <div class="exp-when">Nov 2025<br>—&nbsp;<span class="now">Present</span></div>
+      <div>
+        <h3 class="exp-role">Instructor, Generative AI</h3>
+        <p class="exp-org">ICMA Digital Academy</p>
+        <p class="exp-detail">Teach generative AI to CMA students — tooling, LLM fundamentals, prompt engineering, and applied workflows.</p>
+      </div>
+    </li>
 
-                    <div class="card">
-                        <img class="card-img-top" src="Images/Apps/learn_skills.jpg" alt="Learn skills">
-                        <div class="card-body">
-                            <h5 class="card-title font-weight-bold">Learn Skills</h5>
-                            <p class="card-text">Learn Skills is Android App to learn different skills like Graphic Design, 
-                                Digital Marketing, creative writing, Search Engine Optimization(SEO), 
-                                E-Commerce etc. by watching videos and Reading Articles and start freelancing.
-                            </p>
-                        </div>
-                        <div class="card-body">
-                            <a href="https://github.com/zeeshanmahar007/Learn-Skills-Android-app"
-                                target="_blank" class="btn btn-outline-primary">Source Code</a>
-                        </div>
-                    </div>
+    <li class="exp reveal">
+      <div class="exp-when">Jun 2025<br>—&nbsp;<span class="now">Present</span></div>
+      <div>
+        <h3 class="exp-role">Research Assistant — S2Cool</h3>
+        <p class="exp-org">LUMS &times; Northumbria University, UK</p>
+        <p class="exp-detail">Apply ML/DL to HVAC performance optimisation for sustainable cooling. International collaboration on energy efficiency and climate resilience.</p>
+      </div>
+    </li>
 
-                    <div class="card">
-                        <img class="card-img-top" src="Images/Apps/Painting_project.JPG" alt="Paint Project">
-                        <div class="card-body">
-                            <h5 class="card-title font-weight-bold">Object Oriented Based Paint Project</h5>
-                            <p class="card-text">This project is about paint and used graphics to 
-                                paint on that graphics only uses in this project the concept of 
-                                Object Oriented Programming (OOP) e.g. polymorphism, inheritance and also include library of 
-                                graphics.h and language used for this project is c++.
-                            </p>
-                        </div>
-                        <div class="card-body">
-                            <a href="https://github.com/zeeshanmahar007/Object-Oriented-OOP-Based-Project"
-                                target="_blank" class="btn btn-outline-primary">Source Code</a>
-                        </div>
-                    </div>
-                </div>
+    <li class="exp reveal">
+      <div class="exp-when">Jan&nbsp;–&nbsp;Dec<br>2025</div>
+      <div>
+        <h3 class="exp-role">Graduate Teaching Assistant</h3>
+        <p class="exp-org">LUMS — CS5316 NLP &amp; CS536 Data Mining (Dr. Asim Karim)</p>
+        <p class="exp-detail">Supported graduate NLP (transformers, LLMs, summarisation, MT) and data-mining courses; mentored students on Hugging Face workflows.</p>
+      </div>
+    </li>
 
-                <div class="card-deck">
-                    <div class="card">
-                        <img class="card-img-top" src="Images/Apps/matrix_parallel.jpg" alt="matrix_parallel">
-                        <div class="card-body">
-                            <h5 class="card-title font-weight-bold">Matrix Matrix Multiplication in Parallel Using OpenMP</h5>
-                            <p class="card-text">Develope Algorithm for Matrix-Matrix Multiplication in Parallel Using OpenMP
-                                 to save time. we will distribute Process to different Thread that will multiply their respective
-                                 matrix and calculate Answer in Parallel.</p>
-                        </div>
-                        <div class="card-body">
-                            <a href="https://github.com/zeeshanmahar007/Matrix-Matrix-Multiplication-in-Parallel"
-                                target="_blank" class="btn btn-outline-primary">Source Code</a>
-                        </div>
-                    </div>
-                    
-                    <div class="card">
-                        <img class="card-img-top" src="Images/Apps/Crossword_game.jpg"
-                            alt="Crossword_game">
-                        <div class="card-body">
-                            <h5 class="card-title font-weight-bold">Crossword Game Using Assembly Language MASM Syntax</h5>
-                            <p class="card-text"> Console base crossword game using assembly language (MASM Syntax). When you 
-                                run the program menu display on console, and you have entered your choice. 
-                                when you enter 1 game will be start and maze will display on console you have 
-                                to enter word that present in maze and if the word is correct you can get score else your 
-                                lives will be decrement by 1. and complete all word to enter next level.</p>
-                            <a href="https://github.com/zeeshanmahar007/crossword-game-using-Assembly-Language-MASM-syntax" target="_blank"
-                                class="btn btn-outline-primary">Source Code</a>
-                        </div>
-                    </div>
+    <li class="exp reveal">
+      <div class="exp-when">Oct&nbsp;–&nbsp;Dec<br>2024</div>
+      <div>
+        <h3 class="exp-role">Research Assistant — BAP Lab</h3>
+        <p class="exp-org">LUMS · Bio-Agri-Photonics</p>
+        <p class="exp-detail">Image reconstruction on speckled imaging data using a convolutional autoencoder baseline + HistoGAN with histogram-feature conditioning.</p>
+      </div>
+    </li>
 
-                    <div class="card">
-                        <img class="card-img-top" src="Images/Apps/heart_disease_predict.jpg"
-                            alt="heart_disease_predict">
-                        <div class="card-body">
-                            <h5 class="card-title font-weight-bold">Heart Disease Predictions
-                            </h5>
-                            <p class="card-text">At the Start applied Data preprocessing technique to clean the data on 
-                                heart disease dataset and then apply Decision Tree and Naïve Bayesian to Predict disease.
-                            </p>
-                            <a href="https://github.com/zeeshanmahar007/Heart-Disease-Prediction" target="_blank"
-                                class="btn btn-outline-primary">Source Code</a>
-                        </div>
-                    </div>
-                  
-                </div>
-                
-                <!-- END Project -->
-            </div>
-            <div class="tab-pane fade" id="nav-articles" role="tabpanel" aria-labelledby="nav-articles-tab">
-                <!-- START Articles -->
-                <div class="card-deck">
-                    <div class="card">
-                        <img class="card-img-top" src="Images/Article/agivsani.png" alt="ANI Vs AGI">
-                        <div class="card-body">
-                            <h5 class="card-title font-weight-bold">ANI(Artificial Narrow Intelligence) Vs AGI(Artificial General Intelligence)</h5>
-                            <p class="card-text"><b>Publication:</b> <a href="https://medium.com/analytics-vidhya"
-                                    target="_blank" class="card-link">Analytics Vidhya</a><br><br>In this article, we’ll see the difference between 
-                                    Artificial General Intelligence and Artificial Narrow Intelligence. After that discuss their Application.
-                                </p>
-                        </div>
-                        <div class="card-body">
-                            <a href="https://medium.com/analytics-vidhya/agi-vs-ani-artificial-general-intelligence-vs-artificial-narrow-intelligence-e86eb1d63039"
-                                target="_blank" class="btn btn-outline-primary">View on Medium</a>
-                        </div>
-                    </div>
-                </div>  
-                <!-- END Articles -->
-            </div>
-        </div>
-    </section>
-    <!-- My Work Section END -->
+    <li class="exp reveal">
+      <div class="exp-when">Apr 2022<br>—&nbsp;Jul 2023</div>
+      <div>
+        <h3 class="exp-role">Microsoft Learn Student Ambassador <span style="font-family:var(--ff-mono);font-size:11px;letter-spacing:0.08em;color:var(--accent);">(Alpha)</span></h3>
+        <p class="exp-org">Microsoft</p>
+        <p class="exp-detail">Promoted to Alpha tier. Delivered workshops on open source, Git, and AI to 200+ attendees.</p>
+      </div>
+    </li>
 
-    <!-- Footer -->
-    <footer class="m-3 mx-auto">
-        <div class="text-center text-white p-3" style="background-color: rgba(0,0,0,0.8)">Designed By : Shreyas Patil
-        </div>
-    </footer>
+    <li class="exp reveal">
+      <div class="exp-when">Jul 2020<br>—&nbsp;<span class="now">Present</span></div>
+      <div>
+        <h3 class="exp-role">GDSC Lead, then Mentor</h3>
+        <p class="exp-org">Google Developers · FAST-NUCES</p>
+        <p class="exp-detail">1 of 43 GDSC Leads in Pakistan (2020–21). Led 20+ core team and 350+ chapter; organised 15+ events on AI, GCP, and Android with 1,000+ attendees.</p>
+      </div>
+    </li>
+  </ul>
+</section>
 
-    <!-- Statcounter -->
-    <script type="text/javascript">
-        var sc_project = 12121673;
-        var sc_invisible = 1;
-        var sc_security = "206010bd"; 
-    </script>
-    <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
-    <noscript>
-        <div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img
-                    class="statcounter" src="https://c.statcounter.com/12121673/0/206010bd/1/" alt="Web Analytics"></a>
-        </div>
-    </noscript>
-    <!-- End of Statcounter Code -->
+<!-- ========== SKILLS ========== -->
+<section id="skills">
+  <div class="section-head reveal">
+    <div class="section-eyebrow">§ Stack</div>
+    <h2 class="section-title">Tools of the <em>trade</em>.</h2>
+  </div>
 
-    <!-- Initialize Animation -->
-    <script>
-        AOS.init();
-    </script>
-    <script src="js/main.js"></script>
+  <div class="skills-grid">
+    <div></div>
+    <div class="skills-list">
+
+      <div class="skill-row reveal">
+        <span class="skill-label">Languages</span>
+        <div class="skill-items"><span class="pri">Python</span>, SQL, Java, C++</div>
+      </div>
+
+      <div class="skill-row reveal">
+        <span class="skill-label">ML &amp; Deep Learning</span>
+        <div class="skill-items"><span class="pri">PyTorch</span>, TensorFlow, Scikit-learn, NumPy, Pandas, OpenCV, CNNs, Transformers, Autoencoders, GANs, Transfer Learning</div>
+      </div>
+
+      <div class="skill-row reveal">
+        <span class="skill-label">Generative AI &amp; LLMs</span>
+        <div class="skill-items"><span class="pri">Hugging Face</span>, <span class="pri">LangChain</span>, OpenAI API, GPT-4o, BERT, T5, XLM-RoBERTa, CLIP, RAG, Supervised Fine-Tuning, Chain-of-Thought, Instruction Tuning, Multi-Agent LLMs, Prompt Engineering</div>
+      </div>
+
+      <div class="skill-row reveal">
+        <span class="skill-label">Retrieval &amp; Vector DBs</span>
+        <div class="skill-items">Weaviate, ChromaDB, Embeddings, Semantic Search, Reciprocal Rank Fusion</div>
+      </div>
+
+      <div class="skill-row reveal">
+        <span class="skill-label">Cloud — GCP <span style="color:var(--muted);font-weight:400">(primary)</span></span>
+        <div class="skill-items"><span class="pri">Cloud Run</span>, Cloud Build, Artifact Registry, Cloud SQL, Compute Engine, Cloud Storage, Vertex AI, Cloud Functions</div>
+      </div>
+
+      <div class="skill-row reveal">
+        <span class="skill-label">Cloud — AWS</span>
+        <div class="skill-items">EC2, S3, Lambda, Bedrock, ECR, Fargate, Elastic Beanstalk, CloudFront</div>
+      </div>
+
+      <div class="skill-row reveal">
+        <span class="skill-label">DevOps &amp; CI/CD</span>
+        <div class="skill-items"><span class="pri">Docker</span>, GitHub Actions, Google Cloud Build, Terraform, FastAPI, Streamlit, Git</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== CONTACT ========== -->
+<section id="contact">
+  <div class="section-head reveal">
+    <div class="section-eyebrow">§ Contact</div>
+    <h2 class="section-title">Let's <em>talk</em>.</h2>
+  </div>
+
+  <div class="contact-grid">
+    <div></div>
+    <div>
+      <p class="contact-body reveal">
+        I'm open to roles in <em>ML engineering</em> and <em>applied research</em>, particularly around LLMs, retrieval, and applied deep learning. The fastest way to reach me is email — I usually reply within a day.
+      </p>
+      <div class="contact-links reveal">
+        <a href="mailto:mahar.zeeshan5994@gmail.com">→ Email</a>
+        <a href="https://www.linkedin.com/in/zeeshanmahar007/" target="_blank" rel="noopener">→ LinkedIn</a>
+        <a href="https://github.com/zeeshanmahar007" target="_blank" rel="noopener">→ GitHub</a>
+        <a href="https://ieeexplore.ieee.org/abstract/document/11463094" target="_blank" rel="noopener">→ ICASSP paper</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <span>© 2026 Muhammad Zeeshan</span>
+  <span>Set in Fraunces &amp; Inter</span>
+</footer>
+
+<script>
+  // Subtle scroll reveal
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
 </body>
-
 </html>
